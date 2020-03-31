@@ -57,12 +57,10 @@ The API is available at `http://localhost:3000`
                 "songs": null
             }
 
+* /artists/{artistName}
 
-- /artists/{artistName}
-
-        GET => Get an artists by name
-            Response => [
-                {
+        GET => Get an artist by name
+            Response => {
                     "ID": 1,
                     "CreatedAt": "2020-03-31T11:39:36.175657Z",
                     "UpdatedAt": "2020-03-31T12:05:34.453087Z",
@@ -70,8 +68,7 @@ The API is available at `http://localhost:3000`
                     "name": "Example Artist",
                     "description": "This is a description",
                     "songs": null
-                }
-            ]
+            }
 
         PUT => Update an artist
             Body => {
@@ -88,10 +85,10 @@ The API is available at `http://localhost:3000`
                 "description": "This is a description",
                 "songs": null
             }
-        
+
         DELETE => Delete an artist by name
 
-- /artists/{artistName}/songs
+* /artists/{artistName}/songs
 
         GET => Get all songs from an artist by name
             Response => [
@@ -125,8 +122,8 @@ The API is available at `http://localhost:3000`
                 "genre": ["Indie Poptism"],
                 "length": 180
             }
-    
-- /artists/{artistName}/songs/{songTitle}
+
+* /artists/{artistName}/songs/{songTitle}
 
         GET => Get a song from an artist by name and song title
             Response => {
@@ -139,7 +136,7 @@ The API is available at `http://localhost:3000`
                 "genre": ["Indie Poptism"],
                 "length": 180
             }
-        
+
         PUT => Update a song from an artist by name and song title
             Body => {
                 "title": "updated song title",
@@ -158,8 +155,5 @@ The API is available at `http://localhost:3000`
                 "genre": ["Indie Poptism"],
                 "length": 180
             }
-        
+
         DELETE => Delete a song from artist by name and song title
-
-
-
